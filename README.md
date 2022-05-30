@@ -1,4 +1,4 @@
-# Steg 1 - Planera tester
+# Planera tester
 
 ### Test 1 - Överföring mellan användare
 Om det finns två användare med samma namn, kan programmet inte säkerställa vilken användare som överföringen ska till.
