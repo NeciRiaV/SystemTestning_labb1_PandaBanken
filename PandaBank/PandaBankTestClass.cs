@@ -18,16 +18,18 @@ namespace PandaBank
             balance = _balance;
             currency = _currency;
         }
-    }
-    public class TransferAccounts
-    {
+
+        public PandaBankTestClass()
+        {
+
+        }
+
+
         public List<PandaBankTestClass> ListOfAccounts = new List<PandaBankTestClass>();
         public void AddAccounts(PandaBankTestClass _accounts)
         {
             ListOfAccounts.Add(_accounts);
         }
-        
-
 
         public bool TransferMoneyToSameNameAccountTest(PandaBankTestClass accountFrom,PandaBankTestClass accountTo)
         {
@@ -56,15 +58,6 @@ namespace PandaBank
             Console.WriteLine("Account found");
             return true;
         } 
-    }
-
-    public class WithdrawMoney 
-    {
-        public List<PandaBankTestClass> ListOfAccounts = new List<PandaBankTestClass>();
-        public void AddAccounts(PandaBankTestClass _accounts)
-        {
-            ListOfAccounts.Add(_accounts);
-        }
 
         public float WithdrawelMoneyTest(PandaBankTestClass account, float moneyWithdrawn)
         {
@@ -74,7 +67,7 @@ namespace PandaBank
             //Konto att ta pengar från
             string withdrawAccount = "Pay";
             PandaBankTestClass account1 = ListOfAccounts.Find(s => s.name == withdrawAccount);
-            while (Account1 == null)
+            while (account1 == null)
             {
                 Console.WriteLine("Fail! Wrong account name!");
             }
@@ -98,15 +91,6 @@ namespace PandaBank
             Console.WriteLine("Withdrawl approved");
             return account1.balance -= moneyAmount; //egen tillagd kod för att returnera
             //SaveCalculations(moneyAmount, 0, Account1, null);
-        }
-    }
-
-    public class DepositMoney
-    {
-        public List<PandaBankTestClass> ListOfAccounts = new List<PandaBankTestClass>();
-        public void AddAccounts(PandaBankTestClass _accounts)
-        {
-            ListOfAccounts.Add(_accounts);
         }
 
         public float DepositMoneyTest(PandaBankTestClass depositAccount, float moneyDeposit)

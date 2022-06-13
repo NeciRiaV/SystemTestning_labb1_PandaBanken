@@ -16,12 +16,14 @@ namespace PandaBank.Test
             PandaBankTestClass Account2 = new PandaBankTestClass("Home", 350, "SEK");
             PandaBankTestClass Account3 = new PandaBankTestClass("Home", 300, "USD");
 
-            TransferAccounts transfer = new TransferAccounts(/*acc1: "Pay"*/);
+            PandaBankTestClass transfer = new PandaBankTestClass();
             string test = "Home";
 
             //Action
             var expected = true;
             var actual = transfer.TransferMoneyToSameNameAccountTest(Account1, Account2);
+
+            
 
             //Assert
             Assert.AreEqual(expected, actual);

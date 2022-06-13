@@ -6,14 +6,14 @@ namespace PandaBank.Test
     public class DepositMoneyTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Return_True_If_Value_Less_Than_100_Is_Deposited()
         {
             //Arrange
             PandaBankTestClass Account1 = new PandaBankTestClass("Pay", 350, "SEK");
             PandaBankTestClass Account2 = new PandaBankTestClass("Home", 350, "SEK");
             PandaBankTestClass Account3 = new PandaBankTestClass("Home", 300, "SEK");
 
-            DepositMoney dMoney = new DepositMoney();
+            PandaBankTestClass dMoney = new PandaBankTestClass();
 
             //Act
             var expected = 351;
@@ -21,8 +21,6 @@ namespace PandaBank.Test
 
             //Assert
             Assert.AreEqual(expected, actual);
-
-
         }
     }
 }
