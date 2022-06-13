@@ -25,16 +25,6 @@ namespace PandaBank.Test
 
             //Assert
             Assert.AreEqual(expected, actual);
-            //if (expected.Equals(actual))
-            //{
-            //    Console.WriteLine("One of the accounts home has been found");
-            //    return true;
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Account home cannot be found");
-            //    return false;
-            //}
         }
     }
 }
